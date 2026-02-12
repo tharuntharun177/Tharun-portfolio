@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tharun is a passionate digital creator and developer. Explore his portfolio, skills, and projects.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tharun.dev/">
+    <meta property="og:title" content="Tharun - Digital Creator">
+    <meta property="og:description"
+        content="Tharun is a passionate digital creator and developer. Explore his portfolio, skills, and projects.">
+    <meta property="og:image" content="https://tharun.dev/tharun.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tharun.dev/">
+    <meta property="twitter:title" content="Tharun - Digital Creator">
+    <meta property="twitter:description"
+        content="Tharun is a passionate digital creator and developer. Explore his portfolio, skills, and projects.">
+    <meta property="twitter:image" content="https://tharun.dev/tharun.jpg">
+
+    <title>Tharun - Digital Creator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Leaflet Map JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">Tharun</div>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact" class="btn-primary">Let's Talk</a></li>
+            <li><button id="login-btn" class="btn-secondary nav-login-btn">Login</button></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-content fade-in-up">
+            <h1>Hi, I'm <span class="gradient-text">Tharun</span></h1>
+            <p>A passionate developer and designer crafting immersive digital experiences. Welcome to my personal
+                portfolio.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Hire Me</a>
+            </div>
+            <div class="hero-image-container fade-in-up delay-2">
+                <div class="profile-wrapper">
+                    <canvas id="bubble-canvas"></canvas>
+                    <img src="tharun.jpg" alt="Tharun" class="hero-profile-circle">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Technical Skills</h2>
+            <div class="skills-container">
+                <!-- Skill 1 -->
+                <div class="skill-bar-wrapper fade-in-up delay-1">
+                    <div class="skill-info">
+                        <span>HTML5</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #e34c26;" data-width="95%"></div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="skill-bar-wrapper fade-in-up delay-1">
+                    <div class="skill-info">
+                        <span>CSS3</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #264de4;" data-width="90%"></div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="skill-bar-wrapper fade-in-up delay-2">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #f7df1e;" data-width="85%"></div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="skill-bar-wrapper fade-in-up delay-2">
+                    <div class="skill-info">
+                        <span>React</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #61dbfb;" data-width="80%"></div>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="skill-bar-wrapper fade-in-up delay-3">
+                    <div class="skill-info">
+                        <span>Node.js</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #68a063;" data-width="75%"></div>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="skill-bar-wrapper fade-in-up delay-3">
+                    <div class="skill-info">
+                        <span>UI Design</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="background: #F24E1E;" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">About Us</h2>
+            <div class="about-content">
+                <div class="about-text fade-in-up delay-1">
+                    <h3>Redefining Digital Experiences</h3>
+                    <p>At Lumina, we believe that the web is more than just information; it's an experience. Our team of
+                        visionary designers and developers work tirelessly to push the boundaries of what's possible in
+                        the browser.</p>
+                    <p>We combine artistic flair with engineering precision to build products that aren't just
+                        functional, but unforgettable.</p>
+                    <a href="#contact" class="btn-secondary">Work With Us</a>
+                </div>
+                <div class="about-image glass-card fade-in-up delay-2">
+                    <img src="tharun.jpg" alt="Tharun" class="profile-photo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-line-progress"></div>
+                <!-- Item 1 -->
+                <div class="timeline-item fade-in-up delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2023 - 2027</span>
+                        <h3>B-tech</h3>
+                        <p>Pursuing Bachelor of Technology at Kakinada Engineering University.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item fade-in-up delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3>Intermediate</h3>
+                        <p>Completed Intermediate education at Sri Chaitanya Junior College.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="timeline-item fade-in-up delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2021</span>
+                        <h3>Schooling</h3>
+                        <p>Completed my education at Sri Chaitanya Techno School.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Get In Touch</h2>
+            <div class="contact-container fade-in-up">
+                <!-- Left Column: Contact Info -->
+                <div class="contact-info">
+                    <h3>Let's Talk</h3>
+                    <p>Have a project in mind or want to collaborate? Feel free to reach out using the form or my
+                        contact details below.</p>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>tharundunna17@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Andhra Pradesh, India</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/tharun" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tharundunna?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+
+                        <a href="https://www.instagram.com/tharun__17_____?igsh=NzBrZnRuM29nYXNs" target="_blank"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/@tharundunna17?si=r1EJB8FSWEkB7zar" target="_blank"
+                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-form-wrapper glass-card">
+                    <form class="contact-form" action="https://formsubmit.co/tharundunna17@gmail.com" method="POST"
+                        id="my-form">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                        <input type="hidden" name="_subject" value="New Submission from Portfolio!">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 Lumina Designs. All rights reserved.</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <button id="chat-toggle" aria-label="Toggle chat widget">
+            <span class="chat-icon">💬</span>
+        </button>
+
+        <div class="chat-window hidden" id="chat-window">
+            <div class="chat-header">
+                <h3>Tharun AI</h3>
+                <button id="chat-close" aria-label="Close chat">✖</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hi! I'm Tharun's virtual assistant. Ask me anything about his skills, projects, or how to contact
+                    him.
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a message..." aria-label="Chat message">
+                <button id="chat-send" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Login/Register Modal -->
+    <div id="auth-modal" class="auth-modal-overlay hidden">
+        <div class="auth-modal-content glass-card">
+            <button id="auth-close" class="auth-close-btn">&times;</button>
+
+            <!-- Login Form -->
+            <div id="login-container" class="auth-form-container">
+                <h2>Welcome Back</h2>
+                <p class="auth-subtitle">Login to your account</p>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary auth-submit">Login</button>
+                    <div class="auth-separator">
+                        <span>OR</span>
+                    </div>
+                    <button type="button" class="btn-secondary google-btn">
+                        <i class="fa-brands fa-google"></i> Continue with Google
+                    </button>
+                </form>
+                <p class="auth-switch">
+                    Don't have an account? <span id="switch-to-register">Sign up</span>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-container" class="auth-form-container hidden">
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Join our community</p>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary auth-submit">Sign Up</button>
+                    <div class="auth-separator">
+                        <span>OR</span>
+                    </div>
+                    <button type="button" class="btn-secondary google-btn">
+                        <i class="fa-brands fa-google"></i> Continue with Google
+                    </button>
+                </form>
+                <p class="auth-switch">
+                    Already have an account? <span id="switch-to-login">Login</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
